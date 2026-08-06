@@ -12,14 +12,16 @@ export default function Header() {
 // Styles
 const styles = StyleSheet.create({
   appName: {
-    fontSize: 18,
+    fontSize: 16,
     fontWeight: "600",
     color: "#6B8E5E",
+    marginBottom: 8,
   },
   greeting: {
-    fontSize: 32,
+    fontSize: 38,
     fontWeight: "700",
     color: "#2F3A2F",
+    marginBottom: 15,
   },
   headerContainer: {
     paddingHorizontal: 20,

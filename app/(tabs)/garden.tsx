@@ -1,10 +1,10 @@
 import { StyleSheet, Text } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
-export default function BudgetScreen() {
+export default function GardenScreen() {
   return (
     <SafeAreaView style={styles.container}>
-      <Text style={styles.title}>Budget</Text>
+      <Text style={styles.title}>Garden</Text>
     </SafeAreaView>
   );
 }

@@ -1,3 +1,4 @@
+import { BlurView } from "expo-blur";
 import { ReactNode } from "react";
 import { StyleSheet, View } from "react-native";
 
@@ -6,25 +7,36 @@ type CardProps = {
 };
 
 export default function Card({ children }: CardProps) {
-  return <View style={styles.card}>{children}</View>;
+  return (
+    <View style={styles.card}>
+      <BlurView intensity={30} tint="light" style={styles.blur}>
+        {children}
+      </BlurView>
+    </View>
+  );
 }
 
 const styles = StyleSheet.create({
   card: {
-    backgroundColor: "#FFFFFF",
-    borderRadius: 20,
+    borderRadius: 24,
+    overflow: "hidden",
+
     borderWidth: 1,
-    borderColor: "#E7E3DA",
-    padding: 20,
-    marginHorizontal: 20,
-    marginBottom: 40,
+    borderColor: "rgba(255,255,255,0.7)",
+
     shadowColor: "#000",
+    shadowOpacity: 0.05,
+    shadowRadius: 12,
     shadowOffset: {
       width: 0,
-      height: 2,
+      height: 4,
     },
-    shadowOpacity: 0.08,
-    shadowRadius: 10,
-    elevation: 2,
+    margin: 10,
+    marginBottom: 16,
+  },
+
+  blur: {
+    padding: 20,
+    backgroundColor: "rgba(255,255,255,0.28)",
   },
 });
